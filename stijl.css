@@ -1,4 +1,23 @@
 body{
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    font-family: Helvetica;
+    background-color: rgb(249, 205, 255);
+    h2{
+        color: rgb(157, 0, 0);
+        text-decoration: underline double;
+    }
 }
+
+a{
+    background-color: chocolate;
+    transition-duration: 0,3s;
+}
+
+a:hover{
+    size: 3.5;
+    background-color: blueviolet;
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
