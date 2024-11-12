@@ -1,11 +1,12 @@
 body{
     display: grid;
     font-family: Helvetica;
-    background-color: rgb(249, 205, 255);
+    background-color: rgb(44, 44, 44);
     h2{
         color: rgb(157, 0, 0);
         text-decoration: underline double;
     }
+    color: white;
 }
 
 a{
