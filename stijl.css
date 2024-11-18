@@ -1,12 +1,19 @@
+
+
 body{
+    font-family: "sid-Regular", Arial, sans-serif;
     display: grid;
-    font-family: Helvetica;
     background-color: rgb(44, 44, 44);
     h2{
         color: rgb(157, 0, 0);
         text-decoration: underline double;
     }
     color: white;
+}
+
+@font-face {
+    font-family: "sid-regular";
+    src:url("sid-Regular.otf") format("opentype")
 }
 
 a{
@@ -22,3 +29,5 @@ a:hover{
 a:link{
     text-decoration: none;
     color: black;
+}
+
