@@ -1,7 +1,6 @@
 
 
 body{
-    font-family: "sid-Regular", Arial, sans-serif;
     display: grid;
     background-color: rgb(44, 44, 44);
     h2{
@@ -14,6 +13,15 @@ body{
 @font-face {
     font-family: "sid-regular";
     src:url("sid-Regular.otf") format("opentype")
+}
+
+h4{
+    font-family: "sid-Regular", Arial, sans-serif;
+    
+    @font-face {
+        font-family: "sid-regular";
+        src:url("sid-Regular.otf") format("opentype")
+    }
 }
 
 a{
