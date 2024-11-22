@@ -2,7 +2,7 @@ body{
     display: grid;
     background-color: whitesmoke;
     h2{
-        color: rgb(157, 0, 0);
+        color: rgb(0, 0, 0);
         text-decoration: underline double;
     }
     color: black;
@@ -38,8 +38,14 @@ summary{
     font-family: "sid2-regular", Arial, sans-serif;
 }
 
+summary::marker {
+    color:hotpink ;
+    font-size: 1.2em;
+}
+
 summary:hover{
     color: aqua;
+    font-family: "sid-Regular", Arial, sans-serif;
 }
 
 summary:focus{
