@@ -1,27 +1,64 @@
-
-
 body{
     display: grid;
-    background-color: rgb(44, 44, 44);
+    background-color: whitesmoke;
     h2{
         color: rgb(157, 0, 0);
         text-decoration: underline double;
     }
-    color: white;
+    color: black;
 }
 
 @font-face {
     font-family: "sid-regular";
-    src:url("sid-Regular.otf") format("opentype")
+    src:url("sid-Regular.otf") format("opentype");
+}
+
+@font-face{
+    font-family: "sid2-regular";
+    src:url(sid2-regular.otf) format(opentype);
+}
+
+section{
+    display: grid;
+     grid-template-columns: 1fr 4fr 1fr;
+}
+
+.Blok1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.Blok2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+summary{
+    font-size: 2em;
+    font-family: "sid2-regular", Arial, sans-serif;
+}
+
+summary:hover{
+    color: aqua;
+}
+
+summary:focus{
+    color: aqua;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.6em;
+
+    font-family: "sid2-regular", Arial, sans-serif;
 }
 
 h4{
     font-family: "sid-Regular", Arial, sans-serif;
-    
-    @font-face {
-        font-family: "sid-regular";
-        src:url("sid-Regular.otf") format("opentype")
-    }
 }
 
 a{
