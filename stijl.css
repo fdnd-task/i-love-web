@@ -15,7 +15,11 @@ body{
 
 @font-face{
     font-family: "sid2-regular";
-    src:url(sid2-regular.otf) format(opentype);
+    src:url("sid2-regular.otf") format(opentype);
+}
+
+details{
+    max-width: 60%;
 }
 
 section{
@@ -29,6 +33,11 @@ section{
 }
 
 .Blok2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.Blok3{
     grid-column-start: 2;
     grid-column-end: 3;
 }
