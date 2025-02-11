@@ -11,6 +11,6 @@
     gap: 1.2rem;
     justify-content: center;
 }
-li:nth-of-type(9) {
-    width: 20%;
+.fotosminis img{
+    width: 10em;
 }
