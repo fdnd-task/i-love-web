@@ -777,6 +777,42 @@
                         op kinderen te helpen om tweetalig opgevoed te worden.
                     </p>
                 </article>
+
+                <article>
+                    <h2>12 februari</h2>
+
+                    <h3>Directus filteren opdracht</h3>
+
+                    <ul>
+                        <li><code>https://fdnd.directus.app/items/person/?sort=-name</code>
+                        wat dit zoek resultaat laat zien is de namen die gesorteerd staan van Z-A. Dit komt
+                    omdat er een "-" staat voor name.</li>
+                        <li><code>https://fdnd.directus.app/items/person/?filter={%22name%22:{%22_istarts_with%22:%22d%22}}</code>
+                        Dit zoekt op mensen die hun naam begint met de letter D</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                    <ul>
+                        <li><code>{{ buddy.animal | downcase }}</code>Zorgt ervoor dat de letters allemaal klein zijn</li>
+                        <li><code>{{ buddy.name | remove: "D" |  remove: "a"  }}</code>Verwijderd de letter D en de letter A van de naam van de buddy</li>
+                        <li></li>
+                        <li><code>|  replace_first: "a", "x"</code>vervangt de eerste letter "a" met een "x" in de tekst</li>
+                        <li></li>
+                    </ul>
+
+                    <ul>
+                        <li></li>
+                        <li><code>{{ "titel, titel, titel" | remove_last: "," }}</code>Verwijderd de laatste komma van de array</li>
+                        <li><code>{% assign my_array = buddy.animal | split: "" %}
+                            p{{ my_array  | reverse }}/p</code>Eerst assign ik een eigen array aan. De eigen array komt van buddy.animal. Ik gebruik split 
+                        om van de string een array te maken. Door de split leeg te houden neemt het de gehele tekst over. Daarna vertel ik
+                    dat "my_array" omgekeerd moet worden</li>
+                        <li></li>
+                    </ul>
+                </article>
             </details>
         </section>
     </body>
