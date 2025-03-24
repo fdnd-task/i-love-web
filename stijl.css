@@ -90,3 +90,18 @@ a:hover{
     size: 3.5;
     background-color: blueviolet;
 }
+
+
+.text_fade{
+    background-clip: text;
+    color: transparent;
+
+    font-size: 2rem;
+    background-image: 
+        linear-gradient(
+            90deg,
+            blue,
+            black
+        )
+    ;
+}
