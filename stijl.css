@@ -105,3 +105,21 @@ a:hover{
         )
     ;
 }
+
+.rondje{
+    @supports (display: none){
+        height: 10rem;
+        width: 10rem;
+        border-radius: 20rem;
+
+        background-image: radial-gradient(
+            purple,
+            purple
+    )};
+}
+
+.spelen{
+    color: black;
+    background-color: transparent;
+    border-radius: transparent;
+}

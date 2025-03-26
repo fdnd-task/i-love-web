@@ -1,3 +1,8 @@
-let optie1 = document.querySelector('.optie1');
+let play = document.querySelector('audio')
 
-optie1.addEventListener('click', tonen)
+play.addEventListener('click', afspelen)
+
+function afspelen(){
+    play.classList.toggle('spelen')
+}
+
