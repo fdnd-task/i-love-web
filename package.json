@@ -1,0 +1,24 @@
+{
+  "name": "i-love-web",
+  "version": "2.0.0",
+  "description": "De ilove web site voor de HVA en mijzelf",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sidopjescherm/i-love-web.git"
+  },
+  "author": "Sidney Hermus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sidopjescherm/i-love-web/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/Sidopjescherm/i-love-web#readme"
+}
