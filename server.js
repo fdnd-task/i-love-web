@@ -4,8 +4,6 @@ import { Liquid } from 'liquidjs';
 
 import { readdir, readFile } from 'node:fs/promises'
 
-console.log(files)
-
 const app = express()
 
 app.set('views', './views')
