@@ -4,8 +4,6 @@ import { Liquid } from 'liquidjs';
 
 import { readdir, readFile } from 'node:fs/promises'
 
-const files = await readdir('content')
-
 console.log(files)
 
 const app = express()
