@@ -17,13 +17,12 @@ app.engine('liquid', engine.express());
 
 // ----Hier is de homepage---
 app.get('/', async function(request, response){
-    response.render('index.liquid', {files: files})
+    response.render('index.liquid')
 })
 
 app.get('/:slug', async function(req, res) {
     console.log(req.params.slug)
-    const fileContents = await readFile('/' + req.params.slug + '.md', { encoding: 'utf8' })
-    res.render('artikel.liquid', {fileContent: fileContents})
+    res.render('artikel.liquid')
   })
 
 // ---Hier is de warhammer pagina---
