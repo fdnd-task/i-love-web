@@ -23,7 +23,7 @@ app.get('/:slug', async function(req, res) {
     res.render('artikel.liquid')
   })
 
-// ---Hier is de warhammer pagina---
+// ---MARK: Hier is de warhammer pagina---
 app.get('/warhammer', async function (request, response) {
     response.render('warhammer.liquid')
 })
