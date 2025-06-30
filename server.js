@@ -24,9 +24,23 @@ app.get('/warhammer', async function (request, response) {
 })
 
 // ----MARK: Hier is de Spells pagina---
+const api_spells = "https://www.dnd5eapi.co/api/spells"
+
+// hier maak ik informatie uit de spells API
+const spellsResponse = await fetch(api_spells);
+
+// nu maak ik er een JSON object van
+const spellsResponseJSON = await spellsResponse.json();
+// console.log(spellsResponseJSON);
+
+// Hier zet ik de data van de spells naar de pagina
 app.get('/spells', async function (request, response) {
-    response.render('spells_showcase.liquid')
-  
+    const spellsResponse = await fetch(api_spells);
+    const spellsResponseJSON = await spellsResponse.json();
+    // console.log(spellsResponseJSON);
+
+    response.render('spells_showcase.liquid', {spells: spellsResponseJSON.results});
+    console.log(spellsResponseJSON.results);
 })
 
 app.use(express.urlencoded({extended: true}))
