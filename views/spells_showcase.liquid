@@ -19,8 +19,7 @@
         {% comment %} Hier komen de spreuken te staan {% endcomment %}
         {%for spell in spells %}
             <li>
-                <p>{{ spell.name }}</p>
-                <p>{{ spell.level }}</p>
+                <a href="{{ spell.index }}">{{ spell.name }}</a>
             </li>
 
         {% endfor %}
