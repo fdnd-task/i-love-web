@@ -18,14 +18,15 @@ app.get('/', async function(request, response){
     response.render('index.liquid')
 })
 
-app.get('/:slug', async function(req, res) {
-    console.log(req.params.slug)
-    res.render('artikel.liquid')
-  })
-
 // ---MARK: Hier is de warhammer pagina---
 app.get('/warhammer', async function (request, response) {
     response.render('warhammer.liquid')
+})
+
+// ----MARK: Hier is de Spells pagina---
+app.get('/spells', async function (request, response) {
+    response.render('spells_showcase.liquid')
+  
 })
 
 app.use(express.urlencoded({extended: true}))
@@ -35,4 +36,4 @@ app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {
     console.log(`Application started on http://localhost:${app.get('port')}`)
   })
-  
+
