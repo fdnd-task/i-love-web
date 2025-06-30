@@ -1,9 +1,16 @@
 <a href="/spells">All spells</a>
 
 <h1>{{ spreuk.name }}</h1>
+<hr>
 
 <section id="specs">
     {% comment %} hier komt de range {% endcomment %}
+     <h2>Range</h2>
+        <p>{{ spreuk.range }}</p>
     {% comment %} hier komen de classes die gebruik kunnen maken van de spell {% endcomment %}
+     <h3>Class</h3>
+         <p>{{ spreuk.classes.first.name |  sort | join: ", " }}</p>
     {% comment %} Uitleg van de spell {% endcomment %}
+     <h4>Description</h4>
+        <p>{{ spreuk.desc }}</p>
 </section>
