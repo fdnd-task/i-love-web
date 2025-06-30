@@ -1,19 +1,28 @@
 <hero>
     {% comment %} Titel van dit project {% endcomment %}
+     <h1>DnD 5E Spells</h1>
 
     {% comment %} waarop je kan filtere {% endcomment %}
-
+     <h2>Filter By</h2>
     {% comment %} knoppen voor het filteren van de spreuken {% endcomment %}
      {% comment %} Level {% endcomment %}
+      <a href="" alt="filteren op level spell">level</a>
      {% comment %} Class {% endcomment %}
+     <a href="" alt="filteren op welke class de spell gebruikt">class</a>
      {% comment %} A-Z {% endcomment %}
+     <a href="" alt="filteren op alfabetische volgorde">A-Z</a>
+      <hr>
 </hero>
 
 <section>
     <ul>
         {% comment %} Hier komen de spreuken te staan {% endcomment %}
         {%for spell in spells %}
-            <li>{{ spell.name }}</li>
+            <li>
+                <p>{{ spell.name }}</p>
+                <p>{{ spell.level }}</p>
+            </li>
+
         {% endfor %}
     </ul>
 </section>
