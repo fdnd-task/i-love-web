@@ -1,0 +1,19 @@
+<hero>
+    {% comment %} Titel van dit project {% endcomment %}
+
+    {% comment %} waarop je kan filtere {% endcomment %}
+
+    {% comment %} knoppen voor het filteren van de spreuken {% endcomment %}
+     {% comment %} Level {% endcomment %}
+     {% comment %} Class {% endcomment %}
+     {% comment %} A-Z {% endcomment %}
+</hero>
+
+<section>
+    <ul>
+        {% comment %} Hier komen de spreuken te staan {% endcomment %}
+        {%for spell in spells %}
+            <li>{{ spell.name }}</li>
+        {% endfor %}
+    </ul>
+</section>
