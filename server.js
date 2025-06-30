@@ -24,7 +24,7 @@ app.get('/warhammer', async function (request, response) {
 })
 
 // ----MARK: Hier is de Spells pagina---
-const api_spells = "https://www.dnd5eapi.co/api/spells"
+const api_spells = "https://www.dnd5eapi.co/api/spells/"
 
 // hier maak ik informatie uit de spells API
 const spellsResponse = await fetch(api_spells);
@@ -40,9 +40,17 @@ app.get('/spells', async function (request, response) {
     // console.log(spellsResponseJSON);
 
     response.render('spells_showcase.liquid', {spells: spellsResponseJSON.results});
-    console.log(spellsResponseJSON.results);
+    // console.log(spellsResponseJSON.results);
 })
 
+app.get('/:index', async function (request, response) {
+    const spreukResponse = await fetch(`${api_spells}${request.params.index}`)
+    const spreukResponseJSON = await spreukResponse.json()
+
+    console.log(spreukResponseJSON)
+
+    response.render('spreuk.liquid', {spreuk: spreukResponseJSON})
+})
 app.use(express.urlencoded({extended: true}))
 
 app.set('port', process.env.PORT || 8000)
