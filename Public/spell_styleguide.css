@@ -1,0 +1,48 @@
+@font-face{
+    font-family: firlest;
+    src: url("/fonts/firlest.regular.otf") format(opentype);
+}
+
+@font-face {
+    font-family: morris-roman;
+    src: url("/fonts/morris-roman.black.ttf") format(truetype);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--header-spells);
+    font-family: var(--tekst-spells);
+
+    --header-spells: 'firlest', sans-serif;
+    --tekst-spells: 'morris-roman', helvetica;
+
+    /* MARK: Kleuren */
+    color-scheme: light dark;
+    --background-color: light-dark(#FFFFFF, #1F1F1F);
+    --background-spell: light-dark(#823E6C, #630330);
+    --color-text: light-dark(black, white);
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, a{
+    font-family: "firlest";
+    color: var(--color-text);
+}
+
+li{
+    background-color: var(--background-spell);
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-family: "morris-roman";
+    color: var(--color-text);
+}
