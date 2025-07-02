@@ -43,6 +43,7 @@ app.get('/spells', async function (request, response) {
     // console.log(spellsResponseJSON.results);
 })
 
+// MARK: spreuk details
 app.get('/:index', async function (request, response) {
     const spreukResponse = await fetch(`${api_spells}${request.params.index}`)
     const spreukResponseJSON = await spreukResponse.json()
