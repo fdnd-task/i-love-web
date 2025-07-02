@@ -1,33 +1,35 @@
-<link rel="stylesheet" href="/spell_styleguide.css">
-<link rel="stylesheet" href="/showcase.css">
+{% render 'partials/header.liquid' %} 
+    <link rel="stylesheet" href="/spell_styleguide.css">
+    <link rel="stylesheet" href="/showcase.css">
 
-<hero>
-    {% comment %} Titel van dit project {% endcomment %}
-     <h1>DnD 5E Spells</h1>
+    <hero>
+        {% comment %} Titel van dit project {% endcomment %}
+        <h1>DnD 5E Spells</h1>
 
-    {% comment %} waarop je kan filtere {% endcomment %}
-     <h2>Filter By</h2>
-    {% comment %} knoppen voor het filteren van de spreuken {% endcomment %}
-     {% comment %} Level {% endcomment %}
-    <section class="filter">
-        <a href="" alt="filteren op level spell">level</a>
-        {% comment %} Class {% endcomment %}
-        <a href="" alt="filteren op welke class de spell gebruikt">class</a>
-        {% comment %} A-Z {% endcomment %}
-        <a href="" alt="filteren op alfabetische volgorde">A-Z</a>
-     </section>
-      <hr>
-</hero>
+        {% comment %} waarop je kan filtere {% endcomment %}
+        <h2>Filter By</h2>
+        {% comment %} knoppen voor het filteren van de spreuken {% endcomment %}
+        {% comment %} Level {% endcomment %}
+        <section class="filter">
+            <a href="" alt="filteren op level spell">level</a>
+            {% comment %} Class {% endcomment %}
+            <a href="" alt="filteren op welke class de spell gebruikt">class</a>
+            {% comment %} A-Z {% endcomment %}
+            <a href="" alt="filteren op alfabetische volgorde">A-Z</a>
+        </section>
+        <hr>
+    </hero>
 
-<section>
-    <ul>
-        {% comment %} Hier komen de spreuken te staan {% endcomment %}
-        {%for spell in spells %}
-            <a href="{{ spell.index }}">
-                <li>
-                    <h3>{{ spell.name }}</h3>
-                </li>
-            </a>
-        {% endfor %}
-    </ul>
-</section>
+    <section>
+        <ul>
+            {% comment %} Hier komen de spreuken te staan {% endcomment %}
+            {%for spell in spells %}
+                <a href="{{ spell.index }}">
+                    <li>
+                        <h3>{{ spell.name }}</h3>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </section>
+{% render 'partials/footer.liquid' %}
