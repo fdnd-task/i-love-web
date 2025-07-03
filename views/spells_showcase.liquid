@@ -1,7 +1,6 @@
 {% render 'partials/header.liquid' %} 
-    <link rel="stylesheet" href="/spell_styleguide.css">
-    <link rel="stylesheet" href="/showcase.css">
-
+    {% comment %} <link rel="stylesheet" href="/spell_styleguide.css">
+    <link rel="stylesheet" href="/showcase.css">  {% endcomment %}
     <hero>
         {% comment %} Titel van dit project {% endcomment %}
         <h1>DnD 5E Spells</h1>
@@ -31,11 +30,11 @@
         <ul>
             {% comment %} Hier komen de spreuken te staan {% endcomment %}
             {%for spell in spells %}
-                <a href="{{ spell.index }}">
+                <label for="{{ spell.name }}">
                     <li>
-                        <h3>{{ spell.name }}</h3>
+                        <a id="{{ spell.name }}" href="{{ spell.index }}">{{ spell.name }}</a>
                     </li>
-                </a>
+                </label>
             {% endfor %}
         </ul>
     </section>
