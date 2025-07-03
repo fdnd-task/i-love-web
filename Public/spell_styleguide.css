@@ -35,7 +35,7 @@ h1, h2, h3, h4, a{
 }
 
 li{
-    background-color: var(--background-spell);
+    list-style: none;
 }
 
 a{
