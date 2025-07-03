@@ -52,7 +52,7 @@ app.get('/:index', async function (request, response) {
     const spreukResponse = await fetch(`${api_spells}${request.params.index}`)
     const spreukResponseJSON = await spreukResponse.json()
 
-    console.log(spreukResponseJSON)
+    // console.log(spreukResponseJSON)
 
     response.render('spreuk.liquid', {spreuk: spreukResponseJSON})
 })
