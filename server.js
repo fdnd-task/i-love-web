@@ -39,6 +39,10 @@ app.get('/spells', async function (request, response) {
     const spellsResponseJSON = await spellsResponse.json();
     // console.log(spellsResponseJSON);
 
+    // hier komt de spellfilter
+    const spellfilter = fetch(`${api_spells}?level=${request.params.level}`);
+    
+
     response.render('spells_showcase.liquid', {spells: spellsResponseJSON.results});
     // console.log(spellsResponseJSON.results);
 })
