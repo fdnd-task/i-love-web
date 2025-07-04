@@ -11,31 +11,31 @@
         {% comment %} Level {% endcomment %}
         <section class="filter">
             <select>
-                <option value="">level 0</option>
-                <option value="">level 1</option>
-                <option value="">level 2</option>
-                <option value="">level 3</option>
-                <option value="">level 4</option>
-                <option value="">level 5</option>
-                <option value="">level 6</option>
-                <option value="">level 7</option>
-                <option value="">level 8</option>
-                <option value="">level 9</option>
+                <option value=""><a>level 0</a></option>
+                <option value=""><a>level 1</a></option>
+                <option value=""><a>level 2</a></option>
+                <option value=""><a>level 3</a></option>
+                <option value=""><a>level 4</a></option>
+                <option value=""><a>level 5</a></option>
+                <option value=""><a>level 6</a></option>
+                <option value=""><a>level 7</a></option>
+                <option value=""><a>level 8</a></option>
+                <option value=""><a>level 9</a></option>
             </select>
         </section>
         <hr>
     </hero>
 
-    <section>
-        <ul>
-            {% comment %} Hier komen de spreuken te staan {% endcomment %}
-            {%for spell in spells %}
-                <label for="{{ spell.name }}">
-                    <li>
-                        <a id="{{ spell.name }}" href="{{ spell.index }}">{{ spell.name }}</a>
-                    </li>
-                </label>
-            {% endfor %}
-        </ul>
-    </section>
+        <section>
+            <ul>
+                {% comment %} Hier komen de spreuken te staan {% endcomment %}
+                {%for spell in spells %}
+                    <label for="{{ spell.name }}">
+                        <li>
+                            <a id="{{ spell.name }}" href="/spells/{{ spell.index }}">{{ spell.name }}</a>
+                        </li>
+                    </label>
+                {% endfor %}
+            </ul>
+        </section>
 {% render 'partials/footer.liquid' %}
