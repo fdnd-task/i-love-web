@@ -20,11 +20,17 @@
             {% assign classes = classes | sort: "name" %}
             {% comment %} een for loop gebruiken zodat de namen onder elkaar staan {% endcomment %}
             {% for class in classes %}
-                <p>{{ class.name }}</p>
+                <p>{{ class.name |  join: ', '}}</p>
             {% endfor %}
 
         {% comment %} Uitleg van de spell {% endcomment %}
         <h4>Description</h4>
             <p>{{ spreuk.desc }}</p>
+
+        <h5>School</h5>
+            <p>{{ spreuk.school.name |  sort: "name" }}</p>
+        
+        <h6>Level</h6>
+            <p>{{ spreuk.level }}</p>
     </section>
 {% render 'partials/footer.liquid' %}
