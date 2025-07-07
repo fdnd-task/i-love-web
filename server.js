@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { Liquid } from 'liquidjs';
+import { Liquid, Value } from 'liquidjs';
 
 import { readdir, readFile } from 'node:fs/promises'
 
@@ -34,25 +34,38 @@ const spellsResponseJSON = await spellsResponse.json();
 // console.log(spellsResponseJSON);
 
 // Hier zet ik de data van de spells naar de pagina
-app.get('/spells', async function (request, response) {
-    const spellsResponse = await fetch(api_spells);
-    const spellsResponseJSON = await spellsResponse.json();
-    // console.log(spellsResponseJSON);
+app.get('/spells', async function (request, response) {    
+    // hier komt de spellfilter 
+    let spellsURL = 'https://www.dnd5eapi.co/api/spells/';
 
-    // hier komt de spellfilter
-    const spellfilter = fetch(`${api_spells}?level=${request.params.level}`);
-    
+    if (request.query.level ==  2 ) {
+        spellsURL = spellsURL + `?level=2`
+    } else if (request.query.level == 3) {
+        spellsURL = spellsURL + '?level=3'
+    }
+    else {
+        spellsURL = spellsURL + ''
+    }
+    console.log(request.query.level)
+
+
+    const spellsResponse = await fetch(spellsURL);
+    const spellsResponseJSON = await spellsResponse.json();
+
+    // console.log(spellsResponseJSON)
 
     response.render('spells_showcase.liquid', {spells: spellsResponseJSON.results});
     // console.log(spellsResponseJSON.results);
 })
+
+
 
 // MARK: spreuk details
 app.get('/spells/:index', async function (request, response) {
     const spreukResponse = await fetch(`${api_spells}${request.params.index}`)
     const spreukResponseJSON = await spreukResponse.json()
 
-    console.log(spreukResponseJSON)
+    // console.log(spreukResponseJSON)
 
     response.render('spreuk.liquid', {spreuk: spreukResponseJSON})
 })
