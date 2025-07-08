@@ -25,7 +25,7 @@
 
         {% comment %} Uitleg van de spell {% endcomment %}
         <h4>Description</h4>
-            <p>{{ spreuk.desc }}</p>
+            <p>{{ spreuk.desc |  remove: "---" |  remove: '||||' |  remove: '#####'  }}</p>
 
         <h5>School</h5>
             <p>{{ spreuk.school.name |  sort: "name" }}</p>
