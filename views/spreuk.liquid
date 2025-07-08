@@ -1,0 +1,36 @@
+{% render 'partials/header.liquid' %}
+    {% comment %} <link rel="stylesheet" href="/spell_styleguide.css">
+    <link rel="stylesheet" href="/spreuk.css"> {% endcomment %}
+    <nav>
+        <a href="/spells">All spells</a>
+    </nav>
+
+    <h1>{{ spreuk.name }}</h1>
+    <hr>
+
+    <section id="specs">
+        {% comment %} hier komt de range {% endcomment %}
+        <h2>Range</h2>
+            <p>{{ spreuk.range }}</p>
+        {% comment %} hier komen de classes die gebruik kunnen maken van de spell {% endcomment %}
+        <h3>Class</h3>
+            {% comment %} eerst maak ik een algemene categorie van de classes die in de "classes" array staan {% endcomment %}
+            {% assign classes = spreuk.classes %}
+            {% comment %} hier sorteer ik de classes categorie die ik heb gemaakt op naam {% endcomment %}
+            {% assign classes = classes | sort: "name" %}
+            {% comment %} een for loop gebruiken zodat de namen onder elkaar staan {% endcomment %}
+            {% for class in classes %}
+                <p>{{ class.name |  join: ', '}}</p>
+            {% endfor %}
+
+        {% comment %} Uitleg van de spell {% endcomment %}
+        <h4>Description</h4>
+            <p>{{ spreuk.desc }}</p>
+
+        <h5>School</h5>
+            <p>{{ spreuk.school.name |  sort: "name" }}</p>
+        
+        <h6>Level</h6>
+            <p>{{ spreuk.level }}</p>
+    </section>
+{% render 'partials/footer.liquid' %}
