@@ -38,15 +38,13 @@ app.get('/spells', async function (request, response) {
     // hier komt de spellfilter 
     let spellsURL = 'https://www.dnd5eapi.co/api/spells/';
 
-    if (request.query.level ==  2 ) {
-        spellsURL = spellsURL + `?level=2`
-    } else if (request.query.level == 3) {
-        spellsURL = spellsURL + '?level=3'
+    if (request.query.level) {
+        spellsURL = spellsURL + `?level=` + request.query.level
     }
-    else {
+    else  {
         spellsURL = spellsURL + ''
     }
-    console.log(request.query.level)
+    console.log(spellsURL)
 
 
     const spellsResponse = await fetch(spellsURL);
