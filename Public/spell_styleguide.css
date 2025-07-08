@@ -36,6 +36,8 @@ h1, h2, h3, h4, a{
 
 li{
     list-style: none;
+    background-color: var(--background-spell);
+    border-radius: 5em;
 }
 
 a{
