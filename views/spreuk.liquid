@@ -20,9 +20,8 @@
             {% assign classes = classes | sort: "name" %}
             {% comment %} een for loop gebruiken zodat de namen onder elkaar staan {% endcomment %}
             {% for class in classes %}
-                <p>{{ class.name |  join: ', '}}</p>
+                <p>{{ class.name }}</p>
             {% endfor %}
-
         {% comment %} Uitleg van de spell {% endcomment %}
         <h4>Description</h4>
             <p>{{ spreuk.desc |  remove: "---" |  remove: '||||' |  remove: '#####'  }}</p>
