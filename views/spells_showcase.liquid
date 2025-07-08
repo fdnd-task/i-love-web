@@ -9,7 +9,7 @@
         <h2>Filter By</h2>
         {% comment %} knoppen voor het filteren van de spreuken {% endcomment %}
         {% comment %} Level {% endcomment %}
-        <section class="filter">
+        <div class="filter">
             <a href="/spells">All</a>
             <a href="/spells/?level=0">Cantrips</a>
             <a href="/spells/?level=1">level 1</a>
@@ -21,7 +21,7 @@
             <a href="/spells/?level=7">level 7</a>
             <a href="/spells/?level=8">level 8</a>
             <a href="/spells/?level=9">level 9</a>
-        </section>
+        </div>
         <hr>
     </hero>
 
@@ -29,11 +29,9 @@
             <ul>
                 {% comment %} Hier komen de spreuken te staan {% endcomment %}
                 {%for spell in spells %}
-                    <label for="{{ spell.name }}">
                         <li>
                             <a id="{{ spell.name }}" href="/spells/{{ spell.index }}">{{ spell.name }}</a>
                         </li>
-                    </label>
                 {% endfor %}
             </ul>
         </section>
