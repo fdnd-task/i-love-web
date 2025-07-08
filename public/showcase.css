@@ -1,16 +1,34 @@
-*, *::before, *::after {
-	box-sizing:border-box;
-}
+/* Filter div */
+    .filter{
+            display: flex;
+            flex-direction: row;
 
+            gap: 2em;
+            overflow-x: scroll;
+    }
+/* Spells div */
 ul{
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    display: flex;
+    grid-template-columns:repeat(auto-fit, minmax(min(15em, 100%), 1fr));
     gap: 1em;
 
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    width: 90%;
+    height: 5em;
+
+
     a{
-    background-color: var(--background-spell);
-    list-style: none;
-    padding: 0.5em;
+        font-size: xx-large;
+        width: 100%;
+        align-content: center;
+    }
 }
-}
-    
