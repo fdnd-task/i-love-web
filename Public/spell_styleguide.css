@@ -1,6 +1,6 @@
 @font-face{
-    font-family: firlest;
-    src: url("/fonts/firlest.regular.otf") format(opentype);
+    font-family: hero_archer;
+    src: url("/fonts/hero-archer-free-version.regular.ttf") format(opentype);
 }
 
 @font-face {
@@ -15,7 +15,7 @@
     font-family: var(--header-spells);
     font-family: var(--tekst-spells);
 
-    --header-spells: 'firlest', sans-serif;
+    --header-spells: 'hero_archer', sans-serif;
     --tekst-spells: 'morris-roman', helvetica;
 
     /* MARK: Kleuren */
@@ -30,14 +30,13 @@ body{
 }
 
 h1, h2, h3, h4, a{
-    font-family: "firlest";
+    font-family: "hero_archer";
     color: var(--color-text);
 }
 
 li{
     list-style: none;
     background-color: var(--background-spell);
-    border-radius: 5em;
 }
 
 a{

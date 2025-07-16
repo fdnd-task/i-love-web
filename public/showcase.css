@@ -1,3 +1,9 @@
+    h1, h2{
+        display: flex;
+
+        justify-content: center;
+    }
+
 /* Filter div */
     .filter{
             display: flex;
@@ -5,11 +11,17 @@
 
             gap: 2em;
             overflow-x: scroll;
+
+
+            a{
+                font-size: large;
+                width: 90%;
+            }
+
     }
 /* Spells div */
 ul{
     display: flex;
-    grid-template-columns:repeat(auto-fit, minmax(min(15em, 100%), 1fr));
     gap: 1em;
 
     flex-direction: column;
@@ -21,14 +33,28 @@ li{
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    border-radius: 5em;
 
     width: 90%;
     height: 5em;
 
-
+    /* Spreuken links styling */
     a{
-        font-size: xx-large;
+        font-size: large;
         width: 100%;
         align-content: center;
     }
 }
+
+/*  */
+@media (min-width: 425px) and (max-width: 800px){
+    ul{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns:1fr 1fr;
+    }
+
+    li{
+        justify-self: center;
+    }
+}   
