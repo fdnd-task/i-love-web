@@ -37,7 +37,7 @@
 <div class="fallback">
   <h1>robin van der heijden</h1>
   <h2>creative frontend developer</h2>
-  <a href="https://fdnd-profile-card.vercel.app/">projects</a>
+  <a href="/projects">projects</a>
   <a href="/blog">blog</a>
 </div>
 
@@ -71,7 +71,7 @@
   --height={`${Math.random() * 60 + 5}vh`}
   --align="end"
 >
-  <a href="https://fdnd-profile-card.vercel.app/">projects</a>
+  <a href="/projects">projects</a>
 </DraggableBox>
 
 <DraggableBox
