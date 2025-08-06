@@ -5,10 +5,13 @@
   import { utils, stagger } from "animejs";
   import { onNavigate } from "$app/navigation";
 
-  let refs = []
+  let { data } = $props()
+  let { items } = data
+  let refs = $state([])
   let colors = ["#ffff00", "#00ff00", "#0000ff", "#ff0000"]
 
   const animationSpeed = 100;
+  console.log(items)
 
   onMount(() => {
     let elements = refs;
@@ -45,16 +48,15 @@
   <a href="/">back to home</a>
 </DraggableBox>
 
-{#each [1,2,3,4,5,6,7,8,9,10] as i (i)}
+{#each items as item, i (i)}
   <ProjectCard
-    bind:ref={refs[i]}
+    bind:ref={refs[i + 1]}
     element="section"
     color={colors[(i % colors.length)]}
-    title={`Project ${i}`}
-    link={`/projects/${i}`}
+    title={item.title}
+    link={`/projects/${item.slug}`}
   >
-    <p>21 May 2025</p>
-    <a href={`/projects/${i}`}>test {i}</a>
+    <a href={`/projects/${item.slug}`}>View details</a>
   </ProjectCard>
 {/each}
 

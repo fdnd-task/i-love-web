@@ -18,6 +18,7 @@ html, body {
 
 body {
   font-family: 'Delegate TM', Courier, monospace;
+  background-color: #ffffff;
 }
 
 .js-cont[data-js="no-js"] .no-js {

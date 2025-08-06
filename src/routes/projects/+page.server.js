@@ -26,12 +26,10 @@ export async function load() {
     throw error(response.status, {
       message: response.statusText,
     })
-  } else {
-    console.log(response)
   }
 
   const { data } = await response.json()
   const { items } = data.projectCollection
 
-  return items
+  return { items }
 }

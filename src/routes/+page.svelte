@@ -39,6 +39,7 @@
   <h2>creative frontend developer</h2>
   <a href="/projects">projects</a>
   <a href="/blog">blog</a>
+
   <p><br>(PS: All boxes are draggable)</p>
 </div>
 
@@ -93,13 +94,15 @@
     font-size: 1rem;
     color: #ffffff;
     mix-blend-mode: difference;
+    contain: none;
+    background-color: #000000;
   }
 
-  .fallback a,
+  /* .fallback a,
   .fallback h1,
   .fallback h2 {
     color: #000000;
-  }
+  } */
 
   .fallback a:hover {
     color: #7a71eb;

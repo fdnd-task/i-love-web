@@ -3,13 +3,13 @@ import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from '$env/static/privat
 console.log(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
 
 const contentfulFetch = async (query) => {
-  const url = `https://graphql.eu.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`
+  const url = `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`
 
   const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + CONTENTFUL_ACCESS_TOKEN,
+      Authorization: `Bearer ${CONTENTFUL_ACCESS_TOKEN}`,
     },
     body: JSON.stringify({ query }),
   })
