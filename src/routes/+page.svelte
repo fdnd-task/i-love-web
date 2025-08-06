@@ -39,6 +39,7 @@
   <h2>creative frontend developer</h2>
   <a href="/projects">projects</a>
   <a href="/blog">blog</a>
+  <p><br>(PS: All boxes are draggable)</p>
 </div>
 
 <DraggableBox

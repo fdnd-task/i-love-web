@@ -13,10 +13,10 @@
 
   let elementRef = $derived(ref);
   let bodyRef;
-  let innerWidth;
-  let innerHeight;
-  let offsetWidth;
-  let offsetHeight;
+  let innerWidth = $state(0);
+  let innerHeight = $state(0);
+  let offsetWidth = $state(0);
+  let offsetHeight = $state(0);
 
 
   onMount(() => {
