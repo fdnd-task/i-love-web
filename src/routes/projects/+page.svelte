@@ -7,11 +7,11 @@
 
   let { data } = $props()
   let { items } = data
+
   let refs = $state([])
   let colors = ["#ffff00", "#00ff00", "#0000ff", "#ff0000"]
 
   const animationSpeed = 100;
-  console.log(items)
 
   onMount(() => {
     let elements = refs;
@@ -55,9 +55,8 @@
     color={colors[(i % colors.length)]}
     title={item.title}
     link={`/projects/${item.slug}`}
-  >
-    <a href={`/projects/${item.slug}`}>View details</a>
-  </ProjectCard>
+    image={item.coverImage.url}
+  />
 {/each}
 
 <style>

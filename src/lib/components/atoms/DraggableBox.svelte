@@ -86,11 +86,13 @@
 <style>
   :root {
     --align: start;
+    --direction: row;
   }
 
   div, header, footer, section, article, main, aside {
     position: absolute;
     display: flex;
+    flex-direction: var(--direction);
     gap: 1rem;
     align-items: var(--align);
     justify-content: var(--align);

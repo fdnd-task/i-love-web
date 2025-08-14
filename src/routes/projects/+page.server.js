@@ -22,7 +22,6 @@ export async function load() {
   const response = await contentfulFetch(query)
 
   if (!response.ok) {
-    console.log(response)
     throw error(response.status, {
       message: response.statusText,
     })
