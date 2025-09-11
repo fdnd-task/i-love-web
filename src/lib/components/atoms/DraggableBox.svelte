@@ -9,6 +9,7 @@
     ref = $bindable(),
     x = null,
     y = null,
+    container = null,
   } = $props();
 
   let elementRef = $derived(ref);
@@ -54,31 +55,31 @@
 <svelte:body bind:this={bodyRef} />
 
   {#if element === "header"}
-    <header bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <header bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
       {@render children()}
     </header>
   {:else if element === "footer"}
-    <footer bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <footer bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
       {@render children()}
     </footer>
   {:else if element === "section"}
-    <section bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <section bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
       {@render children()}
     </section>
   {:else if element === "article"}
-    <article bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <article bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
       {@render children()}
     </article>
   {:else if element === "main"}
-    <main bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <main bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
       {@render children()}
     </main>
   {:else if element === "aside"}
-    <aside bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <aside bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
       {@render children()}
     </aside>
   {:else}
-    <div bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <div bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
       {@render children()}
     </div>
 {/if}
@@ -99,5 +100,17 @@
     background-color: var(--color);
     width: var(--width);
     height: var(--height);
+  }
+
+  .container-inline-size {
+    container-type: inline-size;
+  }
+
+  .container-size {
+    container-type: size;
+  }
+
+  .container-normal {
+    container-type: normal;
   }
 </style>

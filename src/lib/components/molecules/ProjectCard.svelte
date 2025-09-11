@@ -5,6 +5,7 @@
     ref = $bindable(),
     title = "Project title",
     link = "https://www.google.com",
+    liveURL = "https://www.google.com",
     image = "",
     color = "#000000",
   } = $props();
@@ -14,18 +15,23 @@
 <DraggableBox
   bind:ref={ref}
   element="section"
+  class="container-inline-size"
   --direction="column"
   --color={color}
-  --width={`${Math.random() * 10 + 30}vw`}
-  --height={`${Math.random() * 10 + 25}vh`}
+  --width={`${Math.random() * 15 + 25}vw`}
+  --height={"auto"}
   --align="end"
 >
   <img src={image} alt={title} />
-  <a href={link}>{title}</a>
+  <h2>{title}</h2>
+  <div>
+    <a href={liveURL}>Live site <span aria-hidden="true">→</span></a>
+    <a href={link}>Details <span aria-hidden="true">→</span></a>
+  </div>
 </DraggableBox>
 
 <style>
-  a {
+  a, h2 {
     font-size: 1rem;
     color: #ffffff;
     mix-blend-mode: difference;
@@ -36,5 +42,22 @@
   img {
     width: 100%;
     height: auto;
+    pointer-events: none;
   }
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @container (width < 11rem) {
+      flex-direction: column-reverse;
+      gap: 0.75rem;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+  }
+
+  
 </style>
