@@ -1,7 +1,5 @@
 import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from '$env/static/private'
 
-console.log(CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN)
-
 const contentfulFetch = async (query) => {
   const url = `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`
 

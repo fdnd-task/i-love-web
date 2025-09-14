@@ -9,11 +9,15 @@ export async function load({ params }) {
 	projectCollection(where: {slug: "${slug}"}){
     items{
       title
+      shortDescription
       coverImage {
         url(transform: {
           format: AVIF
         })
         description
+      }
+      description {
+        json
       }
       slug
     }

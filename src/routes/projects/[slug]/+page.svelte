@@ -7,13 +7,15 @@
   let { data } = $props()
   let item = data.items[0]
 
-  console.log(item);
+  console.log(item.description.json.content[0].content[0].value);
 
   let windowRef;
   let backRef;
   let titleRef;
 
   let refs = $state([])
+
+  const colours = ["#0000ff", "#00ff00", "#ff0000", "#ffff00"]
 
   const animationSpeed = 70;
 
@@ -52,6 +54,12 @@
 <Paragraph bind:ref={refs[2]}>
   <img src={item.coverImage.url} alt={item.coverImage.description} />
 </Paragraph>
+
+{#each item.description.json.content as paragraph, i}
+  <Paragraph bind:ref={refs[i + 3]} --bg={colours[i % colours.length]}>
+    <p>{paragraph.content[0].value}</p>
+  </Paragraph>
+{/each}
 
 <style>
   a,
