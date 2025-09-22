@@ -15,7 +15,7 @@
 
   let refs = $state([])
 
-  const colours = ["#0000ff", "#00ff00", "#ff0000", "#ffff00"]
+  const colours = ["#0000ff", "#ffff00"]
 
   const animationSpeed = 70;
 
@@ -56,7 +56,7 @@
 </Paragraph>
 
 {#each item.description.json.content as paragraph, i}
-  <Paragraph bind:ref={refs[i + 3]} --bg={colours[i % colours.length]}>
+  <Paragraph bind:ref={refs[i + 3]} --bg={Math.random() < 0.5 ? colours[0] : colours[1]}>
     <p>{paragraph.content[0].value}</p>
   </Paragraph>
 {/each}
@@ -68,22 +68,6 @@
     font-size: 1rem;
     color: #ffffff;
     mix-blend-mode: difference;
-  }
-
-  h2 {
-    color: #ffffff;
-    mix-blend-mode: difference;
-  }
-
-  span {
-    display: inline;
-    width: fit-content;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
   }
 
   .back-button {
@@ -110,9 +94,5 @@
 
   h1 {
     font-size: 1rem;
-  }
-
-  .highlight {
-    background-color: var(--red);
   }
 </style>
