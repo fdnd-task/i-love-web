@@ -1,6 +1,7 @@
 <script>
   import { createDraggable, animate, utils, engine } from "animejs";
   import { onMount } from "svelte";
+  import { getContext } from "svelte";
 
   let {
     element = "div",
@@ -19,6 +20,7 @@
   let offsetWidth = $state(0);
   let offsetHeight = $state(0);
 
+  let readingModeActive = $derived(getContext("readingModeActive"));
 
   onMount(() => {
     engine.precision = 0;
@@ -55,31 +57,31 @@
 <svelte:body bind:this={bodyRef} />
 
   {#if element === "header"}
-    <header bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
+    <header bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={[className, readingModeActive.value && "reading-mode"]}>
       {@render children()}
     </header>
   {:else if element === "footer"}
-    <footer bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
+    <footer bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={[className, readingModeActive.value && "reading-mode"]}>
       {@render children()}
     </footer>
   {:else if element === "section"}
-    <section bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
+    <section bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={[className, readingModeActive.value && "reading-mode"]}>
       {@render children()}
     </section>
   {:else if element === "article"}
-    <article bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
+    <article bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={[className, readingModeActive.value && "reading-mode"]}>
       {@render children()}
     </article>
   {:else if element === "main"}
-    <main bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
+    <main bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={[className, readingModeActive.value && "reading-mode"]}>
       {@render children()}
     </main>
   {:else if element === "aside"}
-    <aside bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
+    <aside bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={[className, readingModeActive.value && "reading-mode"]}>
       {@render children()}
     </aside>
   {:else}
-    <div bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={className}>
+    <div bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;" class={[className, readingModeActive.value && "reading-mode"]}>
       {@render children()}
     </div>
 {/if}
@@ -100,6 +102,23 @@
     background-color: var(--color);
     width: var(--width);
     height: var(--height);
+  }
+
+  .reading-mode {
+    position: static !important;
+    max-width: 32rem !important;
+    width: calc(100% - 2rem) !important;
+    transform: none !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 1rem !important;
+    padding: 1rem !important;
+    border: 1px solid #000000 !important;
+    border-radius: 0 !important;
+    height: fit-content !important;
+    background-color: color(from var(--color) srgb r g b / 0.1) !important;
+    cursor: default !important;
+    font-family: "Inter", sans-serif !important;
   }
 
   .container-inline-size {

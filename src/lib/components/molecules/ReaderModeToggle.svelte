@@ -1,5 +1,9 @@
-<button>
-  Reader mode
+<script>
+  let { readingModeActive = $bindable() } = $props();
+</script>
+
+<button onclick={() => (readingModeActive.value = !readingModeActive.value)} class={[readingModeActive.value && "active"]}>
+  Reading mode
 </button>
 
 <style>
@@ -14,5 +18,10 @@
     right: 1rem;
     text-decoration: underline;
     border: 1px solid #000000;
+  }
+
+  button.active {
+    background-color: #000000;
+    color: #ffffff;
   }
 </style>

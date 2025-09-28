@@ -3,6 +3,9 @@
   import { onNavigate } from "$app/navigation";
   import { utils, stagger } from "animejs";
 
+  // THIS PAGE IS ENTIRELY A PLACEHOLDER AND WILL BE REPLACED WITH A DYNAMIC PAGE LATER
+  // It was built in a couple hours for an assignment. Not indicative of the usual level of my work.
+
   import Paragraph from "$lib/components/atoms/Paragraph.svelte";
   import AnchorDemo1 from "$lib/components/atoms/AnchorDemo1.svelte";
   import AnchorDemo2 from "$lib/components/atoms/AnchorDemo2.svelte";

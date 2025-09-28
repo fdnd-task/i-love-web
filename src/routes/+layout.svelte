@@ -1,13 +1,12 @@
 <script>
+  import { setContext } from "svelte";
   import ReaderModeToggle from "$lib/components/molecules/ReaderModeToggle.svelte";
 
   let { children } = $props();
-  let readerMode = $state(false);
+  let readingModeActive = $state({ value: false });
+
+  setContext("readingModeActive", readingModeActive);
 </script>
 
-<ReaderModeToggle bind:readerMode />
+<ReaderModeToggle bind:readingModeActive />
 {@render children()}
-
-
-<style>
-</style>
