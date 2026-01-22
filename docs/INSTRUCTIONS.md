@@ -24,7 +24,7 @@ NB: Je kunt een eigen domeinnaam koppelen aan jouw etalage. Vraag Justus om tips
 
 Je leert aantekeningen bijhouden en gestructureerd studeren. Tijdens checkouts en retrospects ga je regelmatig terugkijken naar wat je allemaal hebt gedaan en geleerd.
 
-Tegelijkertijd werk je aan je eigen website, zodat je aan het eind van je opleiding een écht online visitekaartje hebt.
+Tegelijkertijd werk je aan je eigen website, die met je meegroeit, zodat je aan het eind van je opleiding een écht online visitekaartje hebt. En je krijgt hierdoor ervaring met een wat langer lopend project onderhouden.
 
 ### Semester 1
 
