@@ -22,7 +22,9 @@ NB: Je kunt een eigen domeinnaam koppelen aan jouw etalage. Vraag Justus om tips
 
 ## Doel van deze opdracht
 
-Je leert aantekeningen bijhouden en gestructureerd studeren. Tijdens checkouts en retrospects ga je regelmatig terugkijken naar wat je allemaal hebt gedaan en geleerd. Daarvoor heb je deze I Love Web deeltaak nodig als bewijslast.
+Je leert aantekeningen bijhouden en gestructureerd studeren. Tijdens checkouts en retrospects ga je regelmatig terugkijken naar wat je allemaal hebt gedaan en geleerd.
+
+Tegelijkertijd werk je aan je eigen website, zodat je aan het eind van je opleiding een écht online visitekaartje hebt.
 
 ### Semester 1
 
